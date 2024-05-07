@@ -9,12 +9,15 @@ const Header = () => {
   return (
     <header className="w-full border-b">
       <div className="wrapper flex items-center justify-between">
-        <Link href="/" className="w-36">
+        <div className="flex items-center">
+        <Link href="/">
           <Image 
-            src="/assets/images/logo.svg" width={128} height={38}
+            src="/assets/images/logo.svg" width={60} height={60}
             alt="Evently logo" 
           />
         </Link>
+        <h1 className="text-center text-bold text-3xl font-mono">EVENTIN</h1>
+        </div>
 
         <SignedIn>
           <nav className="md:flex-between hidden w-full max-w-xs">
