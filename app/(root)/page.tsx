@@ -27,7 +27,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
             <h1 className="h1-bold">Create and Register Event Under Your Fingertips</h1>
             <p className="p-regular-20 md:p-regular-24 text-bold">Make it exclusive or free, it is your rules!</p>
             <Button size="lg" asChild className="button w-full sm:w-fit">
-              <Link href="#events">Explore Now</Link>
+              <Link href="#events">Explore!</Link>
             </Button>
           </div>
 
@@ -37,7 +37,7 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
       <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
         <h2 className="h2-bold">
-          Trust by <br /> Thousands of Events
+          See Event <br /> That You Really Like!
         </h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
