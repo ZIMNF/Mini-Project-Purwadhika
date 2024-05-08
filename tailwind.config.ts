@@ -3,7 +3,12 @@ import { withUt } from "uploadthing/tw";
 
 module.exports = withUt({
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -15,7 +20,7 @@ module.exports = withUt({
     extend: {
       colors: {
         primary: {
-          500: "#f9dd87",
+          500: "#1e1e25",
           50: " #83e3e3",
           DEFAULT: "#55747c",
           foreground: "hsl(var(--primary-foreground))",
@@ -26,7 +31,7 @@ module.exports = withUt({
 
         grey: {
           600: "#545454", // Subdued - color name in figma
-          500: "#757575",
+          500: "#4c7c84",
           400: "#AFAFAF", // Disabled - color name in figma
           50: "#F6F6F6", // White Grey - color name in figma
         },
