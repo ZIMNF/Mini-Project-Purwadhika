@@ -20,11 +20,12 @@ const EventDetails = async ({
     page: searchParams.page as string,
   });
 
-  const idrMoney = (money: number) => {
+  const idrMoney = (money: string) => {
+    const moneyNumber = Number(money);
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
       currency: "IDR",
-    }).format(money);
+    }).format(moneyNumber);
   };
 
   return (

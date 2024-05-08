@@ -47,8 +47,8 @@ export const formatDateTime = (dateString: Date) => {
 
 export const convertFileToUrl = (file: File) => URL.createObjectURL(file);
 
-export const formatPrice = (price: number) => {
-  const amount = price;
+export const formatPrice = (price: string) => {
+  const amount = Number(price);
   const formattedPrice = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
