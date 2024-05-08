@@ -9,7 +9,12 @@ const Orders = async ({ searchParams }: SearchParamProps) => {
   const searchText = (searchParams?.query as string) || ''
 
   const orders = await getOrdersByEvent({ eventId, searchString: searchText })
-
+  const idrMoney = (money: number) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+    }).format(money);
+  };
   return (
     <>
       <section className=" bg-primary-50 bg-dotted-pattern bg-cover bg-center py-5 md:py-10">
@@ -53,7 +58,7 @@ const Orders = async ({ searchParams }: SearchParamProps) => {
                         {formatDateTime(row.createdAt).dateTime}
                       </td>
                       <td className="min-w-[100px] py-4 text-right">
-                        {formatPrice(row.totalAmount)}
+                        {idrMoney(row.totalAmount)}
                       </td>
                     </tr>
                   ))}
